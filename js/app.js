@@ -1,14 +1,18 @@
 // JavaScript Document
-var app = angular.module("testApp" []); 
+(function () {
+	var app = angular.module("testApp", []);
 
-var MainCtrl = function() {
-	
-	var product = {
-		Name: "Something",
-		Price: 22.22,
-		Description: "It's something"
+	var MainCtrl = function ($scope) {
+
+		var product = {
+			Name: "Something",
+			Price: 22.22,
+			Description: "It's something"
+		};
+
+		$scope.product = product;
+
 	};
-	
-};
 
-app.controller("MainCtrl", MainCtrl);
+	app.controller("MainCtrl", MainCtrl);
+}());
