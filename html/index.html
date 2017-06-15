@@ -1,15 +1,23 @@
 <!doctype html>
-<html>
+<html ng-app>
 <head>
 <meta charset="UTF-8">
-<title>Untitled Document</title>
+<title>Angular JS site</title>
 <script src="../js/myScript.js"></script>
 <script src="../js/angular.min.js"></script>
 </head>
 
 <body>
-
-	
-
+	<div ng-controller="MainCtrl">
+		<div>
+			Name: {{item.Name}}
+		</div>
+		<div>
+			Price: {{item.Price}}
+		</div>
+		<div>
+			Decription: {{item.Description}}
+		</div>
+	</div>
 </body>
 </html>
