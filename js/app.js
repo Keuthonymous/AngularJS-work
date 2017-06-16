@@ -1,14 +1,16 @@
 // JavaScript Document
 (function () {
 	var app = angular.module("testApp", []);
-
-	var MainCtrl = function ($scope, $http) {
-			$scope.toggle = true;
-		
-			$scope.$watch('toggle', function(){
-				$scope.toggleText = $scope.toggle ? 'Hide' : 'Show';
-			});
-	};
-
-	app.controller("MainCtrl", ["$scope", "$http", MainCtrl]);
+	
+	app.filter("reverse", function() {
+		return function(input) {
+			var result = "";
+			input = input || "";
+			for(var i = 0; i < input.length; i += 1) {
+				result = input.charAt(i) + result;
+			}
+			return result;
+		};
+	});
+	
 }());

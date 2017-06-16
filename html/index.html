@@ -8,11 +8,10 @@
 </head>
 
 <body>
-<div ng-controller="MainCtrl">
-	
-	<button ng-click="toggle = !toggle">{{toggleText}}</button>
-	<div class="box on" ng-show="toggle" ng-animate"'box'">Lorem Ipsum</div>
-				
+<div>
+	<input ng-model="text" type="text" placeholder="Enter some Text... "/>
+	<h1>Input: {{ text }}</h1>
+	<h2>Reversed: {{ text | reverse }}</h2>
 </div>
 </body>
 </html>
