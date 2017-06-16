@@ -3,23 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <title>Angular JS site</title>
-
 <script src="../js/angular.min.js"></script>
 <script src="../js/app.js"></script>
 </head>
 
 <body>
-	<div ng-controller="MainCtrl">
-		<div>
-			Name: {{product.Name}}
-		</div>
-		<div>
-			Price: {{product.Price}}
-		</div>
-		<div>
-			Decription: {{product.Description}}
-		</div>
-	</div>
+<div ng-controller="MainCtrl">
 	
+	<button ng-click="toggle = !toggle">{{toggleText}}</button>
+	<div class="box on" ng-show="toggle" ng-animate"'box'">Lorem Ipsum</div>
+				
+</div>
 </body>
 </html>
